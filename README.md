@@ -16,8 +16,13 @@ python3 main --arg1 4 --arg2 .2 -e 20 -l .0001 -i /Users/username/data -o /Users
 
 ### Command line arguments:
 --arg1 : number of model layers
+
 --arg2 : dropout rate (value from 0.-1.
+
 --epochs (-e) : number of epochs of training
+
 --lr (-l) : learning rate
+
 --output (-o) : output file path
+
 --input (-i) : input file path
