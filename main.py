@@ -116,12 +116,12 @@ def plot_errors(errors, valid_errors, args):
 def main():
     # Define and read in command line arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('arg1', help='Argument of type int', type=int)
-    parser.add_argument('arg2', help='Argument of type float', type=float)
-    parser.add_argument('epochs', help='Epochs argument of type int', type=int)
-    parser.add_argument('lr', help='Learning rate argument of type float', type=float) 
-    parser.add_argument('output', help='Path argument of type string', type=str)
-    parser.add_argument('input', help='Path argument of type string', type=str)
+    parser.add_argument('--arg1', help='Argument of type int', type=int)
+    parser.add_argument('--arg2', help='Argument of type float', type=float)
+    parser.add_argument('-e', '--epochs', help='Epochs argument of type int', type=int)
+    parser.add_argument('-l', '--lr', help='Learning rate argument of type float', type=float) 
+    parser.add_argument('-o', '--output', help='Path argument of type string', type=str)
+    parser.add_argument('-i', '--input', help='Path argument of type string', type=str)
     args = parser.parse_args()
     
     # If gpu is available, use gpu, otherwise, cpu
@@ -137,10 +137,10 @@ def main():
     
     # Import data sets from, for example, saved numpy arrays
     # This example would be if you had separately stored signal and background data
-    signal_train = np.load("/{0}/signal_train.npy".format(args.input))
-    signal_valid = np.load("/{0}/signal_train.npy".format(args.input))
-    bg_train = np.load("/{0}/signal_train.npy".format(args.input))
-    bg_valid = np.load("/{0}/signal_train.npy".format(args.input))
+    signal_train = np.load("{0}/signal_train.npy".format(args.input))
+    signal_valid = np.load("{0}/signal_train.npy".format(args.input))
+    bg_train = np.load("{0}/signal_train.npy".format(args.input))
+    bg_valid = np.load("{0}/signal_train.npy".format(args.input))
     
     # Compile final datasets
     train_data = np.concatenate((signal_train, bg_train))
