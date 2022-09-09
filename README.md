@@ -3,9 +3,13 @@
 
 ### Dependencies:
 argparse
+
 pytorch
+
 tqdm
+
 matplotlib
+
 numpy (should be installed by pytorch)
 
 ### Usage instructions:
