@@ -12,12 +12,14 @@ matplotlib
 
 numpy (should be installed by pytorch)
 
+scikit-learn
+
 ### Usage instructions:
 1. Install python environment with necessary dependencies
 2. Activate python enviroment
 3. Use command line to train model e.g.
 
-python3 main.py --arg1 4 --arg2 .2 -e 20 -l .0001 -i /Users/username/data -o /Users/username/results
+python main.py --arg1 4 --arg2 .2 -e 20 -l .0001 -i /Users/username/data -o /Users/username/results
 
 ### Command line arguments:
 --arg1 : number of model layers
